@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BDD1BB62A82E90900A34EFE /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */; };
+		9BDD1BB82A82F36800A34EFE /* happybells.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9BDD1BB72A82F36800A34EFE /* happybells.wav */; };
+		9BDD1BBE2A84453800A34EFE /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BBD2A84453800A34EFE /* Alarm.swift */; };
+		9BDD1BC02A85377700A34EFE /* defaultText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9BDD1BBF2A85377700A34EFE /* defaultText.txt */; };
+		9BDD1BC22A85388B00A34EFE /* defaultAlarms.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDD1BC12A85388B00A34EFE /* defaultAlarms.json */; };
+		9BDD1BC52A8598EA00A34EFE /* TimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BC42A8598EA00A34EFE /* TimeString.swift */; };
 		9BFFD98D2A7E9838004C864F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD98C2A7E9838004C864F /* AppDelegate.swift */; };
 		9BFFD98F2A7E9838004C864F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD98E2A7E9838004C864F /* SceneDelegate.swift */; };
-		9BFFD9912A7E9838004C864F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD9902A7E9838004C864F /* ViewController.swift */; };
+		9BFFD9912A7E9838004C864F /* AlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD9902A7E9838004C864F /* AlarmsViewController.swift */; };
 		9BFFD9942A7E9838004C864F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFFD9922A7E9838004C864F /* Main.storyboard */; };
 		9BFFD9962A7E983A004C864F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFFD9952A7E983A004C864F /* Assets.xcassets */; };
 		9BFFD9992A7E983A004C864F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFFD9972A7E983A004C864F /* LaunchScreen.storyboard */; };
+		9BFFD9A12A7E9D6B004C864F /* AlarmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD9A02A7E9D6B004C864F /* AlarmsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		9BDD1BB72A82F36800A34EFE /* happybells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = happybells.wav; sourceTree = "<group>"; };
+		9BDD1BBD2A84453800A34EFE /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		9BDD1BBF2A85377700A34EFE /* defaultText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaultText.txt; sourceTree = "<group>"; };
+		9BDD1BC12A85388B00A34EFE /* defaultAlarms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = defaultAlarms.json; sourceTree = "<group>"; };
+		9BDD1BC42A8598EA00A34EFE /* TimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeString.swift; sourceTree = "<group>"; };
 		9BFFD9892A7E9838004C864F /* TradingAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFFD98C2A7E9838004C864F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFFD98E2A7E9838004C864F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9BFFD9902A7E9838004C864F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BFFD9902A7E9838004C864F /* AlarmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsViewController.swift; sourceTree = "<group>"; };
 		9BFFD9932A7E9838004C864F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BFFD9952A7E983A004C864F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BFFD9982A7E983A004C864F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BFFD99A2A7E983A004C864F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFFD9A02A7E9D6B004C864F /* AlarmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BDD1BB92A82F58400A34EFE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9BDD1BB72A82F36800A34EFE /* happybells.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		9BDD1BBC2A84451B00A34EFE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9BDD1BBF2A85377700A34EFE /* defaultText.txt */,
+				9BDD1BC12A85388B00A34EFE /* defaultAlarms.json */,
+				9BDD1BC32A853CFD00A34EFE /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9BDD1BC32A853CFD00A34EFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BDD1BBD2A84453800A34EFE /* Alarm.swift */,
+				9BDD1BC42A8598EA00A34EFE /* TimeString.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BE118612A8124FD0007D893 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9BFFD9952A7E983A004C864F /* Assets.xcassets */,
+				9BFFD98C2A7E9838004C864F /* AppDelegate.swift */,
+				9BFFD98E2A7E9838004C864F /* SceneDelegate.swift */,
+				9BFFD9972A7E983A004C864F /* LaunchScreen.storyboard */,
+				9BFFD99A2A7E983A004C864F /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		9BFFD9802A7E9838004C864F = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +109,13 @@
 		9BFFD98B2A7E9838004C864F /* TradingAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				9BFFD98C2A7E9838004C864F /* AppDelegate.swift */,
-				9BFFD98E2A7E9838004C864F /* SceneDelegate.swift */,
-				9BFFD9902A7E9838004C864F /* ViewController.swift */,
+				9BDD1BBC2A84451B00A34EFE /* Data */,
+				9BFFD9902A7E9838004C864F /* AlarmsViewController.swift */,
 				9BFFD9922A7E9838004C864F /* Main.storyboard */,
-				9BFFD9952A7E983A004C864F /* Assets.xcassets */,
-				9BFFD9972A7E983A004C864F /* LaunchScreen.storyboard */,
-				9BFFD99A2A7E983A004C864F /* Info.plist */,
+				9BFFD9A02A7E9D6B004C864F /* AlarmsViewModel.swift */,
+				9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */,
+				9BDD1BB92A82F58400A34EFE /* Sounds */,
+				9BE118612A8124FD0007D893 /* SupportingFiles */,
 			);
 			path = TradingAlarm;
 			sourceTree = "<group>";
@@ -127,6 +180,9 @@
 			files = (
 				9BFFD9992A7E983A004C864F /* LaunchScreen.storyboard in Resources */,
 				9BFFD9962A7E983A004C864F /* Assets.xcassets in Resources */,
+				9BDD1BB82A82F36800A34EFE /* happybells.wav in Resources */,
+				9BDD1BC22A85388B00A34EFE /* defaultAlarms.json in Resources */,
+				9BDD1BC02A85377700A34EFE /* defaultText.txt in Resources */,
 				9BFFD9942A7E9838004C864F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFFD9912A7E9838004C864F /* ViewController.swift in Sources */,
+				9BDD1BB62A82E90900A34EFE /* SoundPlayer.swift in Sources */,
+				9BFFD9912A7E9838004C864F /* AlarmsViewController.swift in Sources */,
 				9BFFD98D2A7E9838004C864F /* AppDelegate.swift in Sources */,
 				9BFFD98F2A7E9838004C864F /* SceneDelegate.swift in Sources */,
+				9BDD1BBE2A84453800A34EFE /* Alarm.swift in Sources */,
+				9BDD1BC52A8598EA00A34EFE /* TimeString.swift in Sources */,
+				9BFFD9A12A7E9D6B004C864F /* AlarmsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A489R7NNL3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TradingAlarm/Info.plist;
+				INFOPLIST_FILE = TradingAlarm/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A489R7NNL3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TradingAlarm/Info.plist;
+				INFOPLIST_FILE = TradingAlarm/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
