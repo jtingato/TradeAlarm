@@ -39,15 +39,18 @@ struct Alarm: Codable {
         self.alarmId            = try container.decodeIfPresent(String.self, forKey: .alarmId) ?? UUID().uuidString
         self.alarmTitle         = try container.decodeIfPresent(String.self, forKey: .alarmTitle) ?? nil
         self.alarmDescription   = try container.decodeIfPresent(String.self, forKey: .alarmDescription) ?? nil
-        
-        guard let time = TimeString(with: try container.decode(String.self, forKey: .alarmTime)) else {
-            fatalError("Data error when parsing default alerts. \n Alarm id (alarmId) wasmissing or had corrupt alert time.")
-        }
-        self.alarmTime          = Calendar.current.date(bySettingHour: time.hour, minute: time.minutes, second: time.seconds, of: Date())!
-        
         self.alarmRepeats       = try container.decodeIfPresent(Bool.self, forKey: .alarmRepeats) ?? true
         self.alarmEnabled       = try container.decodeIfPresent(Bool.self, forKey: .alarmEnabled) ?? true
         self.alarmSoundName     = try container.decodeIfPresent(String.self, forKey: .alarmSoundName) ?? "happybells"
         self.alarmSoundEnabled  = try container.decodeIfPresent(Bool.self, forKey: .alarmSoundEnabled) ?? true
+        
+        let timeStringFromJson  = try container.decode(String.self, forKey: .alarmTime)
+        self.alarmTime          = Alarm.timeFrom(jsonTimeString: timeStringFromJson) ?? Date(timeIntervalSince1970: 0)
+    }
+    
+    static func timeFrom(jsonTimeString: String) -> Date? {
+        guard let timeString = TimeString(with: jsonTimeString) else { return nil }
+        
+        return Calendar.current.date(bySettingHour: timeString.hour, minute: timeString.minutes, second: 0, of: Date())!
     }
 }

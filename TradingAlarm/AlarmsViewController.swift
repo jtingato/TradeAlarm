@@ -25,7 +25,8 @@ class AlarmsViewController: UIViewController {
             print("Error: \(error)")
         }
         
-        viewModel.publisher
+        // Listens to the 
+        viewModel.triggeredAlertPublisher
             .sink { identifier in
                 print("Received AlertId: \(identifier)")
                 guard let activeAlert = self.viewModel.getAlertBy(id: identifier) else {

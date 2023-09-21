@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BD013EC2A893D1000C35373 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD013EB2A893D1000C35373 /* DateExtensions.swift */; };
+		9BD013EE2A8944BA00C35373 /* testAlarm.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BD013ED2A89403200C35373 /* testAlarm.json */; };
+		9BD014142A8FB4AE00C35373 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD014132A8FB4AE00C35373 /* StringExtensions.swift */; };
 		9BDD1BB62A82E90900A34EFE /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */; };
 		9BDD1BB82A82F36800A34EFE /* happybells.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9BDD1BB72A82F36800A34EFE /* happybells.wav */; };
 		9BDD1BBE2A84453800A34EFE /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BBD2A84453800A34EFE /* Alarm.swift */; };
-		9BDD1BC02A85377700A34EFE /* defaultText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9BDD1BBF2A85377700A34EFE /* defaultText.txt */; };
 		9BDD1BC22A85388B00A34EFE /* defaultAlarms.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDD1BC12A85388B00A34EFE /* defaultAlarms.json */; };
 		9BDD1BC52A8598EA00A34EFE /* TimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BC42A8598EA00A34EFE /* TimeString.swift */; };
+		9BDD1BC72A86CE4600A34EFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BC62A86CE4600A34EFE /* DataManager.swift */; };
+		9BDD1BCF2A86FCDE00A34EFE /* TradingAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BCE2A86FCDE00A34EFE /* TradingAlarmTests.swift */; };
 		9BFFD98D2A7E9838004C864F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD98C2A7E9838004C864F /* AppDelegate.swift */; };
 		9BFFD98F2A7E9838004C864F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD98E2A7E9838004C864F /* SceneDelegate.swift */; };
 		9BFFD9912A7E9838004C864F /* AlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD9902A7E9838004C864F /* AlarmsViewController.swift */; };
@@ -22,13 +26,28 @@
 		9BFFD9A12A7E9D6B004C864F /* AlarmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFD9A02A7E9D6B004C864F /* AlarmsViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9BDD1BD02A86FCDE00A34EFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BFFD9812A7E9838004C864F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BFFD9882A7E9838004C864F;
+			remoteInfo = TradingAlarm;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		9BD013EB2A893D1000C35373 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		9BD013ED2A89403200C35373 /* testAlarm.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testAlarm.json; sourceTree = "<group>"; };
+		9BD014132A8FB4AE00C35373 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		9BDD1BB72A82F36800A34EFE /* happybells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = happybells.wav; sourceTree = "<group>"; };
 		9BDD1BBD2A84453800A34EFE /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		9BDD1BBF2A85377700A34EFE /* defaultText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaultText.txt; sourceTree = "<group>"; };
 		9BDD1BC12A85388B00A34EFE /* defaultAlarms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = defaultAlarms.json; sourceTree = "<group>"; };
 		9BDD1BC42A8598EA00A34EFE /* TimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeString.swift; sourceTree = "<group>"; };
+		9BDD1BC62A86CE4600A34EFE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9BDD1BCC2A86FCDE00A34EFE /* TradingAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradingAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BDD1BCE2A86FCDE00A34EFE /* TradingAlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingAlarmTests.swift; sourceTree = "<group>"; };
 		9BFFD9892A7E9838004C864F /* TradingAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFFD98C2A7E9838004C864F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFFD98E2A7E9838004C864F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +60,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9BDD1BC92A86FCDE00A34EFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BFFD9862A7E9838004C864F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +77,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B1C45632ABB2A6300DFE452 /* Date and Time */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Date and Time";
+			sourceTree = "<group>";
+		};
+		9BD013EA2A893CC700C35373 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BD013EB2A893D1000C35373 /* DateExtensions.swift */,
+				9BD014132A8FB4AE00C35373 /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9BDD1BB92A82F58400A34EFE /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,8 +104,9 @@
 		9BDD1BBC2A84451B00A34EFE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9BDD1BBF2A85377700A34EFE /* defaultText.txt */,
+				9BDD1BC62A86CE4600A34EFE /* DataManager.swift */,
 				9BDD1BC12A85388B00A34EFE /* defaultAlarms.json */,
+				9BD013ED2A89403200C35373 /* testAlarm.json */,
 				9BDD1BC32A853CFD00A34EFE /* Models */,
 			);
 			path = Data;
@@ -76,6 +119,14 @@
 				9BDD1BC42A8598EA00A34EFE /* TimeString.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9BDD1BCD2A86FCDE00A34EFE /* TradingAlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BDD1BCE2A86FCDE00A34EFE /* TradingAlarmTests.swift */,
+			);
+			path = TradingAlarmTests;
 			sourceTree = "<group>";
 		};
 		9BE118612A8124FD0007D893 /* SupportingFiles */ = {
@@ -94,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFFD98B2A7E9838004C864F /* TradingAlarm */,
+				9BDD1BCD2A86FCDE00A34EFE /* TradingAlarmTests */,
 				9BFFD98A2A7E9838004C864F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFFD9892A7E9838004C864F /* TradingAlarm.app */,
+				9BDD1BCC2A86FCDE00A34EFE /* TradingAlarmTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,9 +162,11 @@
 		9BFFD98B2A7E9838004C864F /* TradingAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				9B1C45632ABB2A6300DFE452 /* Date and Time */,
+				9BFFD9922A7E9838004C864F /* Main.storyboard */,
+				9BD013EA2A893CC700C35373 /* Extensions */,
 				9BDD1BBC2A84451B00A34EFE /* Data */,
 				9BFFD9902A7E9838004C864F /* AlarmsViewController.swift */,
-				9BFFD9922A7E9838004C864F /* Main.storyboard */,
 				9BFFD9A02A7E9D6B004C864F /* AlarmsViewModel.swift */,
 				9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */,
 				9BDD1BB92A82F58400A34EFE /* Sounds */,
@@ -123,6 +178,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9BDD1BCB2A86FCDE00A34EFE /* TradingAlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BDD1BD22A86FCDE00A34EFE /* Build configuration list for PBXNativeTarget "TradingAlarmTests" */;
+			buildPhases = (
+				9BDD1BC82A86FCDE00A34EFE /* Sources */,
+				9BDD1BC92A86FCDE00A34EFE /* Frameworks */,
+				9BDD1BCA2A86FCDE00A34EFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BDD1BD12A86FCDE00A34EFE /* PBXTargetDependency */,
+			);
+			name = TradingAlarmTests;
+			productName = TradingAlarmTests;
+			productReference = 9BDD1BCC2A86FCDE00A34EFE /* TradingAlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9BFFD9882A7E9838004C864F /* TradingAlarm */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFFD99D2A7E983A004C864F /* Build configuration list for PBXNativeTarget "TradingAlarm" */;
@@ -150,6 +223,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					9BDD1BCB2A86FCDE00A34EFE = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9BFFD9882A7E9838004C864F;
+					};
 					9BFFD9882A7E9838004C864F = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -169,20 +246,28 @@
 			projectRoot = "";
 			targets = (
 				9BFFD9882A7E9838004C864F /* TradingAlarm */,
+				9BDD1BCB2A86FCDE00A34EFE /* TradingAlarmTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9BDD1BCA2A86FCDE00A34EFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BFFD9872A7E9838004C864F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9BFFD9992A7E983A004C864F /* LaunchScreen.storyboard in Resources */,
+				9BD013EE2A8944BA00C35373 /* testAlarm.json in Resources */,
 				9BFFD9962A7E983A004C864F /* Assets.xcassets in Resources */,
 				9BDD1BB82A82F36800A34EFE /* happybells.wav in Resources */,
 				9BDD1BC22A85388B00A34EFE /* defaultAlarms.json in Resources */,
-				9BDD1BC02A85377700A34EFE /* defaultText.txt in Resources */,
 				9BFFD9942A7E9838004C864F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,14 +275,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9BDD1BC82A86FCDE00A34EFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BDD1BCF2A86FCDE00A34EFE /* TradingAlarmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BFFD9852A7E9838004C864F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD013EC2A893D1000C35373 /* DateExtensions.swift in Sources */,
 				9BDD1BB62A82E90900A34EFE /* SoundPlayer.swift in Sources */,
+				9BDD1BC72A86CE4600A34EFE /* DataManager.swift in Sources */,
 				9BFFD9912A7E9838004C864F /* AlarmsViewController.swift in Sources */,
 				9BFFD98D2A7E9838004C864F /* AppDelegate.swift in Sources */,
 				9BFFD98F2A7E9838004C864F /* SceneDelegate.swift in Sources */,
+				9BD014142A8FB4AE00C35373 /* StringExtensions.swift in Sources */,
 				9BDD1BBE2A84453800A34EFE /* Alarm.swift in Sources */,
 				9BDD1BC52A8598EA00A34EFE /* TimeString.swift in Sources */,
 				9BFFD9A12A7E9D6B004C864F /* AlarmsViewModel.swift in Sources */,
@@ -205,6 +301,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BDD1BD12A86FCDE00A34EFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BFFD9882A7E9838004C864F /* TradingAlarm */;
+			targetProxy = 9BDD1BD02A86FCDE00A34EFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9BFFD9922A7E9838004C864F /* Main.storyboard */ = {
@@ -226,6 +330,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9BDD1BD32A86FCDE00A34EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A489R7NNL3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jti.TradingAlarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradingAlarm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TradingAlarm";
+			};
+			name = Debug;
+		};
+		9BDD1BD42A86FCDE00A34EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A489R7NNL3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jti.TradingAlarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradingAlarm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TradingAlarm";
+			};
+			name = Release;
+		};
 		9BFFD99B2A7E983A004C864F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -399,6 +539,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9BDD1BD22A86FCDE00A34EFE /* Build configuration list for PBXNativeTarget "TradingAlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BDD1BD32A86FCDE00A34EFE /* Debug */,
+				9BDD1BD42A86FCDE00A34EFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9BFFD9842A7E9838004C864F /* Build configuration list for PBXProject "TradingAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
