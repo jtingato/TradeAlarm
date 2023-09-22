@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 
+
 class AlarmsViewController: UIViewController {
     
     @IBOutlet weak var alertTitle: UILabel!
@@ -25,24 +26,23 @@ class AlarmsViewController: UIViewController {
             print("Error: \(error)")
         }
         
-        // Listens to the 
+        // Listens for triggered alarms to display alarm screen
         viewModel.triggeredAlertPublisher
+            .receive(on: DispatchQueue.main)
             .sink { identifier in
                 print("Received AlertId: \(identifier)")
                 guard let activeAlert = self.viewModel.getAlertBy(id: identifier) else {
                     return
                 }
                 
-                DispatchQueue.main.async {
-                    self.alertTitle.text        = activeAlert.alarmTitle
-                    self.alertDescription?.text = activeAlert.alarmDescription
-                    self.view.flash(numberOfFlashes: 10)
-                    if activeAlert.alarmSoundEnabled {
-                        if let soundName = activeAlert.alarmSoundName {
-                            self.soundPlayer.playSound(name: soundName)
-                        } else {
-                            self.soundPlayer.playSound(name: "happybells")
-                        }
+                self.alertTitle.text = activeAlert.alarmTitle
+                self.alertDescription?.text = activeAlert.alarmDescription
+                self.view.flash(numberOfFlashes: 10)
+                if activeAlert.alarmSoundEnabled {
+                    if let soundName = activeAlert.alarmSoundName {
+                        self.soundPlayer.playSound(name: soundName)
+                    } else {
+                        self.soundPlayer.playSound(name: "happybells")
                     }
                 }
             }
