@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if granted {
                 print("Notification Enable Successfully")
             }else{
-                print("Some Error Occure")
+                print("Some Error Occured")
             }
         }
         application.registerForRemoteNotifications()

@@ -14,13 +14,13 @@ struct Alarms: Codable {
 
 struct Alarm: Codable {
     let alarmId: String
-    let alarmTitle: String?
-    let alarmDescription: String?
-    let alarmTime: Date
-    let alarmRepeats: Bool
-    let alarmEnabled: Bool
-    let alarmSoundName: String?
-    let alarmSoundEnabled: Bool
+    var alarmTitle: String?
+    var alarmDescription: String?
+    var alarmTime: Date
+    var alarmRepeats: Bool
+    var alarmEnabled: Bool
+    var alarmSoundName: String?
+    var alarmSoundEnabled: Bool
     
     enum CodingKeys: String, CodingKey {
         case alarmId = "id"
@@ -31,6 +31,13 @@ struct Alarm: Codable {
         case alarmEnabled
         case alarmSoundName
         case alarmSoundEnabled
+    }
+    
+    mutating func update(alarm: Alarm) {
+        self.alarmEnabled = alarm.alarmEnabled
+        self.alarmSoundEnabled = alarm.alarmSoundEnabled
+        self.alarmRepeats = alarm.alarmRepeats
+        self.alarmSoundName = alarm.alarmSoundName
     }
     
     init(from decoder: Decoder) throws {

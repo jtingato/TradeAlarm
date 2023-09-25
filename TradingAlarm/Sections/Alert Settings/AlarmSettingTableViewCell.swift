@@ -1,0 +1,29 @@
+//
+//  AlertSettingCollectionViewCell.swift
+//  TradingAlarm
+//
+//  Created by John Ingato on 9/22/23.
+//
+
+import UIKit
+
+class AlarmSettingTableViewCell: UITableViewCell {
+    @IBOutlet weak var alarmNameLabel: UILabel!
+    @IBOutlet weak var alarmEnabledSwitch: UISwitch!
+    @IBOutlet weak var alarmSoundEnabledSwitch: UISwitch!
+    
+    var thisAlarm: Alarm?
+    var alarmIdentifier: String = ""
+    
+    func populateCell(_ alarm: Alarm) {
+        thisAlarm = alarm
+        alarmIdentifier = alarm.alarmId
+        alarmNameLabel.text = alarm.alarmTitle
+        alarmEnabledSwitch.isOn = alarm.alarmEnabled == true
+    }
+    
+    @IBAction func didUpdateEnabledState(_ sender: UISwitch) {
+        thisAlarm?.alarmEnabled = alarmEnabledSwitch.isOn
+        print(thisAlarm)
+    }
+}

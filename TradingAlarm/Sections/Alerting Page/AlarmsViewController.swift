@@ -48,6 +48,25 @@ class AlarmsViewController: UIViewController {
             }
             .store(in: &subscribers)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let navController = self.navigationController else { return }
+        
+        navController.setNavigationBarHidden(false, animated: false)
+        navController.setToolbarHidden(false, animated: false)
+        
+        toolbarItems = [
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(openSettings))
+        ]
+    }
+        
+    @objc
+    func openSettings() {
+        performSegue(withIdentifier: "Show Settings", sender: self)
+    }
+
 }
 
 extension UIView {
