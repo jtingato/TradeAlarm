@@ -21,11 +21,12 @@ class AlarmsViewModel {
     }
     
     private func createTimer(for alarm: Alarm) -> Timer {
-        Timer(fireAt: alarm.alarmTime, 
-              interval: 0,
-              target: self,
-              selector: #selector(publishAlerting(timer:)),
-              userInfo: alarm.alarmId, repeats: false)
+        print("Scheduling \(alarm.alarmId) \(alarm.alarmTime)")
+        return Timer(fireAt: alarm.alarmTime,
+                     interval: 0,
+                     target: self,
+                     selector: #selector(publishAlerting(timer:)),
+                     userInfo: alarm.alarmId, repeats: false)
     }
     
     @objc func publishAlerting(timer: Timer) {

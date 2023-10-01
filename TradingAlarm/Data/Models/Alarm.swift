@@ -56,8 +56,7 @@ struct Alarm: Codable {
     }
     
     static func timeFrom(jsonTimeString: String) -> Date? {
-        guard let timeString = TimeString(with: jsonTimeString) else { return nil }
-        
-        return Calendar.current.date(bySettingHour: timeString.hour, minute: timeString.minutes, second: 0, of: Date())!
+        return TimeProvider(timeString: jsonTimeString).alarmDate
     }
+        
 }

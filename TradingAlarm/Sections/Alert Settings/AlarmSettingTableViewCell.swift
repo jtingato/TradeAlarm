@@ -10,20 +10,22 @@ import UIKit
 class AlarmSettingTableViewCell: UITableViewCell {
     @IBOutlet weak var alarmNameLabel: UILabel!
     @IBOutlet weak var alarmEnabledSwitch: UISwitch!
-    @IBOutlet weak var alarmSoundEnabledSwitch: UISwitch!
+    @IBOutlet weak var alarmTimeLabel: UILabel!
     
     var thisAlarm: Alarm?
     var alarmIdentifier: String = ""
+    
     
     func populateCell(_ alarm: Alarm) {
         thisAlarm = alarm
         alarmIdentifier = alarm.alarmId
         alarmNameLabel.text = alarm.alarmTitle
         alarmEnabledSwitch.isOn = alarm.alarmEnabled == true
+        alarmTimeLabel.text = alarm.alarmTime.displayString
     }
     
     @IBAction func didUpdateEnabledState(_ sender: UISwitch) {
         thisAlarm?.alarmEnabled = alarmEnabledSwitch.isOn
-        print(thisAlarm)
+        print("Updating \(thisAlarm) to \(alarmEnabledSwitch.isOn ? "enabled" : "disabled")")
     }
 }

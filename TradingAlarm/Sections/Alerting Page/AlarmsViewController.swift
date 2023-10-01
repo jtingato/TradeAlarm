@@ -30,7 +30,7 @@ class AlarmsViewController: UIViewController {
         viewModel.triggeredAlertPublisher
             .receive(on: DispatchQueue.main)
             .sink { identifier in
-                print("Received AlertId: \(identifier)")
+                print("Received AlertId: \(identifier)for displaying")
                 guard let activeAlert = self.viewModel.getAlertBy(id: identifier) else {
                     return
                 }

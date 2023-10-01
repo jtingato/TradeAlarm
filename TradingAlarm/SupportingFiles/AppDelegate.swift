@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.sound,.alert,.badge, .criticalAlert]) { (granted, error) in
             if granted {
-                print("Notification Enable Successfully")
+                print("Notifications were enabled Successfully")
             }else{
-                print("Some Error Occured")
+                print("Some Error Occured while enabling notification")
             }
         }
         application.registerForRemoteNotifications()
@@ -61,12 +61,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             print(deviceToken.description)
             if let uuid = UIDevice.current.identifierForVendor?.uuidString {
-                print(uuid)
+                print("Remote notification token id: \(uuid)")
             }
             UserDefaults.standard.setValue(token, forKey: "ApplicationIdentifier")
             UserDefaults.standard.synchronize()
-
-
         }
 }
 
