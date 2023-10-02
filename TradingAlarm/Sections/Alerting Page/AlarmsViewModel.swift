@@ -15,7 +15,7 @@ class AlarmsViewModel {
     var triggeredAlertPublisher = PassthroughSubject<String, Never>()
     
     func setup() throws {
-        dataManager.activeAlarms.forEach { alarm in
+        dataManager.activeDailyAlarms.forEach { alarm in
             RunLoop.main.add(createTimer(for: alarm), forMode: .common)
         }
     }
@@ -38,6 +38,6 @@ class AlarmsViewModel {
 
 extension AlarmsViewModel {
     func getAlertBy(id: String) -> Alarm? {
-        dataManager.activeAlarms.first { $0.alarmId == id }
+        dataManager.enabledAlarms.first { $0.alarmId == id }
     }
 }

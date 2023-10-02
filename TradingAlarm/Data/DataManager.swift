@@ -17,8 +17,19 @@ class DataManager {
     var mode: DataMode
     private var alarms = Alarms(alarms: [])
     
-    var activeAlarms: [Alarm] {
-        alarms.alarms
+    var inactiveDailyAlarms: [Alarm] {
+        enabledAlarms.filter { $0.alarmTime < Date.now }
+    }
+    
+    var activeDailyAlarms: [Alarm] {
+        var futureAlarms = enabledAlarms.filter { $0.alarmTime >= Date.now }
+        futureAlarms.append(inactiveDailyAlarms.last!)
+        
+        return futureAlarms
+    }
+    
+    var enabledAlarms: [Alarm] {
+        alarms.alarms.filter { $0.alarmEnabled == true }
     }
     
     var allAlarms: [Alarm] {

@@ -52,11 +52,6 @@ struct Alarm: Codable {
         self.alarmSoundEnabled  = try container.decodeIfPresent(Bool.self, forKey: .alarmSoundEnabled) ?? true
         
         let timeStringFromJson  = try container.decode(String.self, forKey: .alarmTime)
-        self.alarmTime          = Alarm.timeFrom(jsonTimeString: timeStringFromJson) ?? Date(timeIntervalSince1970: 0)
+        self.alarmTime          = TimeProvider(timeString: timeStringFromJson).alarmDate
     }
-    
-    static func timeFrom(jsonTimeString: String) -> Date? {
-        return TimeProvider(timeString: jsonTimeString).alarmDate
-    }
-        
 }
