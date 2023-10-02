@@ -14,24 +14,37 @@ enum DataMode {
 }
 
 class DataManager {
+    // Singleton access property
+    static var shared = DataManager()
+    
     var mode: DataMode
     private var alarms = Alarms(alarms: [])
     
+    /// Return an array of Alarms within the current day but where the alarmTime times have already past
     var inactiveDailyAlarms: [Alarm] {
-        enabledAlarms.filter { $0.alarmTime < Date.now }
+        var result = [Alarm]()
+        result.append(contentsOf: enabledAlarms.filter { $0.alarmTime < Date.now })
+        
+        return result
     }
     
+    /// Return an array of Alarms within the current day that are schedule for the future
+    /// The last inactive alarm is included in the array so we always show the last event that happened
     var activeDailyAlarms: [Alarm] {
         var futureAlarms = enabledAlarms.filter { $0.alarmTime >= Date.now }
-        futureAlarms.append(inactiveDailyAlarms.last!)
+        if let last = inactiveDailyAlarms.last {
+            futureAlarms.append(last)
+        }
         
         return futureAlarms
     }
     
+    /// Return an array of all Alarms that have not been disabled by the user
     var enabledAlarms: [Alarm] {
         alarms.alarms.filter { $0.alarmEnabled == true }
     }
     
+    /// Return an array of all Alarms regardless of thier status or grouping
     var allAlarms: [Alarm] {
         alarms.alarms
     }
@@ -56,7 +69,7 @@ class DataManager {
             self.alarms = decoded
         }
     
-    init(mode: DataMode) {
+    private init(mode: DataMode = .production) {
         // Load default content based on the run mode presented from caller
         self.mode = mode
         
