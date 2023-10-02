@@ -8,7 +8,7 @@
 import Foundation
 
 class AlarmSettingsViewModel {
-    private let dataManager = DataManager(mode: .debugMultipleRelativeTimesToNow)
+    private let dataManager = DataManager.shared
     
     lazy var alarmsList: [Alarm] = dataManager.allAlarms
 }

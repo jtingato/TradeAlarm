@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class AlarmsViewModel {
-    private let dataManager = DataManager(mode: .production)
+    private let dataManager = DataManager.shared
 
     // Publishes to subscriber when an alert becomes active
     var triggeredAlertPublisher = PassthroughSubject<String, Never>()

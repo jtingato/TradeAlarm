@@ -26,6 +26,9 @@ class AlarmSettingTableViewCell: UITableViewCell {
     
     @IBAction func didUpdateEnabledState(_ sender: UISwitch) {
         thisAlarm?.alarmEnabled = alarmEnabledSwitch.isOn
-        print("Updating \(thisAlarm) to \(alarmEnabledSwitch.isOn ? "enabled" : "disabled")")
+        
+        if let thisAlarm = thisAlarm {
+            print("Updating \(thisAlarm) to \(alarmEnabledSwitch.isOn ? "enabled" : "disabled")")
+        }
     }
 }
