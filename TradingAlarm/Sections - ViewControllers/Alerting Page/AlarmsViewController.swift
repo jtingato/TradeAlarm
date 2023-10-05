@@ -13,7 +13,6 @@ class AlarmsViewController: UIViewController {
     @IBOutlet weak var alertTitle: UILabel!
     @IBOutlet weak var alertDescription: UILabel?
 
-    let viewModel = AlarmsViewModel()
     var subscribers = [AnyCancellable]()
     let soundPlayer = SoundPlayer()
     
@@ -27,7 +26,7 @@ class AlarmsViewController: UIViewController {
                 let identifier = alarmingState.id
                 
                 print("Received AlertId: \(identifier)for displaying")
-                guard let activeAlert = self.viewModel.getAlertBy(id: identifier) else {
+                guard let activeAlert = DataManager.shared.getAlertBy(id: identifier) else {
                     return
                 }
                 

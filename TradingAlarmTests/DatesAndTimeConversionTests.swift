@@ -21,12 +21,12 @@ final class DateAndTimeConversionsTests: XCTestCase {
     
     // MARK - Playground
     func testTimeZoneDelta() {
-        XCTAssertEqual(TimeProvider.hoursFromNYTime, 1)
+        XCTAssertEqual(TimeProvider.timeZoneDeltaInHours, 1)
     }
     
     func testDeltasBetweenCurrentAndNYTime() {
-        XCTAssertEqual(TimeProvider.hoursFromNYTime, 1.0)
-        XCTAssertEqual(TimeProvider.timeZoneDelta, 3600.0)
+        XCTAssertEqual(TimeProvider.timeZoneDeltaInHours, 1.0)
+        XCTAssertEqual(TimeProvider.timeZoneDeltaInSeconds, 3600.0)
     }
     
  

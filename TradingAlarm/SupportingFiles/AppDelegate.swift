@@ -12,6 +12,8 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        UNUserNotificationCenter.current().delegate = DataManager.shared.alarmScheduler
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.sound,.alert,.badge, .criticalAlert]) { (granted, error) in
             if granted {
                 print("Notifications were enabled Successfully")
@@ -56,15 +58,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-            let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-            print(token)
-
-            print(deviceToken.description)
-            if let uuid = UIDevice.current.identifierForVendor?.uuidString {
-                print("Remote notification token id: \(uuid)")
-            }
-            UserDefaults.standard.setValue(token, forKey: "ApplicationIdentifier")
-            UserDefaults.standard.synchronize()
+        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        print(token)
+        
+        print(deviceToken.description)
+        if let uuid = UIDevice.current.identifierForVendor?.uuidString {
+            print("Remote notification token id: \(uuid)")
         }
+        UserDefaults.standard.setValue(token, forKey: "ApplicationIdentifier")
+        UserDefaults.standard.synchronize()
+    }
 }
 
+//extension AppDelegate: UNUserNotificationCenterDelegate {
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+//        print("userNotificationCenter didReceive")
+//    }
+//    
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        print("userNotificationCenter willPresent")
+//    }
+//}
