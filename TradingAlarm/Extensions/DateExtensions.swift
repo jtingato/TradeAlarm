@@ -9,6 +9,7 @@ import Foundation
 
 extension Date {
     
+    // Display the date time as 9:47:00
     var timeStringFormater: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
@@ -25,6 +26,17 @@ extension Date {
     
     var displayString: String {
         return self.timeStringFormater.string(from: self)
+    }
+    
+    var timeComponents: DateComponents {
+        let hour = Calendar.current.component(.hour, from: self)
+        let minutes = Calendar.current.component(.minute, from: self)
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = hour
+        dateComponents.minute = minutes
+        
+        return dateComponents
     }
 }
 

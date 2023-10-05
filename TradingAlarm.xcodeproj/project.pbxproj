@@ -91,13 +91,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B1C456C2ABDD61A00DFE452 /* Sections */ = {
+		9B1C456C2ABDD61A00DFE452 /* Sections - ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9B1C456E2ABDD64000DFE452 /* Alert Settings */,
 				9B1C456D2ABDD62D00DFE452 /* Alerting Page */,
+				9B1C456E2ABDD64000DFE452 /* Alert Settings */,
 			);
-			path = Sections;
+			path = "Sections - ViewControllers";
 			sourceTree = "<group>";
 		};
 		9B1C456D2ABDD62D00DFE452 /* Alerting Page */ = {
@@ -119,11 +119,22 @@
 			path = "Alert Settings";
 			sourceTree = "<group>";
 		};
+		9B2031C92ACF54BD0074C962 /* Json Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BDD1BC12A85388B00A34EFE /* defaultUTCAlarms.json */,
+				9B5ECB372AC45D250088E931 /* defaultNYAlarms.json */,
+				9BD013ED2A89403200C35373 /* testAlarm.json */,
+			);
+			path = "Json Files";
+			sourceTree = "<group>";
+		};
 		9BD013EA2A893CC700C35373 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				9BD013EB2A893D1000C35373 /* DateExtensions.swift */,
 				9BD014132A8FB4AE00C35373 /* StringExtensions.swift */,
+				9B4C921B2ACCA55700E08231 /* TimeIntervalExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -140,9 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9BDD1BC62A86CE4600A34EFE /* DataManager.swift */,
-				9BDD1BC12A85388B00A34EFE /* defaultUTCAlarms.json */,
-				9B5ECB372AC45D250088E931 /* defaultNYAlarms.json */,
-				9BD013ED2A89403200C35373 /* testAlarm.json */,
+				9B2031C92ACF54BD0074C962 /* Json Files */,
 				9BDD1BC32A853CFD00A34EFE /* Models */,
 			);
 			path = Data;
@@ -202,7 +211,7 @@
 			children = (
 				9BFFD9922A7E9838004C864F /* Main.storyboard */,
 				9BDD1BBC2A84451B00A34EFE /* Data */,
-				9B1C456C2ABDD61A00DFE452 /* Sections */,
+				9B1C456C2ABDD61A00DFE452 /* Sections - ViewControllers */,
 				9BD013EA2A893CC700C35373 /* Extensions */,
 				9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */,
 				9BDD1BB92A82F58400A34EFE /* Sounds */,
@@ -558,8 +567,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TradingAlarm/TradingAlarm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = A489R7NNL3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TradingAlarm/SupportingFiles/Info.plist;
