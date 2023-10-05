@@ -19,7 +19,7 @@ struct TimeProvider {
     init(date: Date) {
         self.date = date
         self.epoch = date.timeIntervalSince1970
-        self.offset = TimeProvider.timeZoneDelta
+        self.offset = TimeProvider.timeZoneDeltaInSeconds
     }
     
     init(timeString: String) {
@@ -37,11 +37,11 @@ struct TimeProvider {
         self.init(date: date)
     }
     
-    static var hoursFromNYTime: Double {
-        return timeZoneDelta / 3600
+    static var timeZoneDeltaInHours: Double {
+        return timeZoneDeltaInSeconds / 3600
     }
     
-    static var timeZoneDelta: TimeInterval {
+    static var timeZoneDeltaInSeconds: TimeInterval {
         TimeInterval(TimeZone(identifier: "America/New_York")!.secondsFromGMT() - TimeZone.current.secondsFromGMT())
     }
 }

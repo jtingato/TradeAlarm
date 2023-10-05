@@ -8,12 +8,7 @@
 import UIKit
 
 class AlarmSettingsViewController: UIViewController {
-
     let viewModel = AlarmSettingsViewModel()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 
 extension AlarmSettingsViewController: UITableViewDataSource, UITableViewDelegate {

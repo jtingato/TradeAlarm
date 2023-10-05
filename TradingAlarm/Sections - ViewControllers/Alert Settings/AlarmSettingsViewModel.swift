@@ -8,7 +8,5 @@
 import Foundation
 
 class AlarmSettingsViewModel {
-    private let dataManager = DataManager.shared
-    
-    lazy var alarmsList: [Alarm] = dataManager.allAlarms
+    var alarmsList: [Alarm] = DataManager.shared.allAlarms
 }

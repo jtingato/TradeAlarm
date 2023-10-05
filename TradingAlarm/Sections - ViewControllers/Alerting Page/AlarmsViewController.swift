@@ -8,37 +8,34 @@
 import UIKit
 import Combine
 
-
 class AlarmsViewController: UIViewController {
     
     @IBOutlet weak var alertTitle: UILabel!
     @IBOutlet weak var alertDescription: UILabel?
 
-    let viewModel = AlarmsViewModel()
     var subscribers = [AnyCancellable]()
     let soundPlayer = SoundPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            try viewModel.setup()
-        } catch {
-            print("Error: \(error)")
-        }
         
         // Listens for triggered alarms to display alarm screen
-        viewModel.triggeredAlertPublisher
+        DataManager.shared.alarmScheduler.triggeredAlertPublisher
             .receive(on: DispatchQueue.main)
-            .sink { identifier in
+            .sink { alarmingState in
+                let identifier = alarmingState.id
+                
                 print("Received AlertId: \(identifier)for displaying")
-                guard let activeAlert = self.viewModel.getAlertBy(id: identifier) else {
+                guard let activeAlert = DataManager.shared.getAlertBy(id: identifier) else {
                     return
                 }
                 
                 self.alertTitle.text = activeAlert.alarmTitle
                 self.alertDescription?.text = activeAlert.alarmDescription
-                self.view.flash(numberOfFlashes: 10)
-                if activeAlert.alarmSoundEnabled {
+                if alarmingState.animated {
+                    self.view.flash(numberOfFlashes: 10)
+                }
+                if activeAlert.alarmSoundEnabled && alarmingState.sounding {
                     if let soundName = activeAlert.alarmSoundName {
                         self.soundPlayer.playSound(name: soundName)
                     } else {
