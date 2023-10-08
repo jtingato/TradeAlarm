@@ -21,7 +21,9 @@ class DataManager: Injectable {
     private var alarms = Alarms(alarms: []) {
         didSet {
             @Injected var alarmScheduler: AlarmScheduler
-            alarmScheduler.schedule(alarms: activeDailyAlarms)
+            if Date.now.isTradingDay && mode == .production {
+                alarmScheduler.schedule(alarms: activeDailyAlarms)
+            }
         }
     }
     
