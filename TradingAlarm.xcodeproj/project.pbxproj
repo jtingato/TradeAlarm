@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		9B1C45702ABDD66700DFE452 /* AlarmSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C456F2ABDD66700DFE452 /* AlarmSettingsViewController.swift */; };
 		9B1C45732ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C45722ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift */; };
+		9B2031CB2ACF7B960074C962 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031CA2ACF7B960074C962 /* AppServices.swift */; };
+		9B2031CD2ACF7CC80074C962 /* AtomicDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031CC2ACF7CC80074C962 /* AtomicDictionary.swift */; };
+		9B2031CF2ACF8B450074C962 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031CE2ACF8B440074C962 /* Injection.swift */; };
+		9B2031D42AD05E240074C962 /* AppLifecycleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031D22AD05E240074C962 /* AppLifecycleManager.swift */; };
+		9B2031D62AD19C780074C962 /* DataManager+debugJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031D52AD19C780074C962 /* DataManager+debugJSON.swift */; };
+		9B2031D82AD19DB80074C962 /* AlarmResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031D72AD19DB80074C962 /* AlarmResponder.swift */; };
 		9B4C921C2ACCA55700E08231 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C921B2ACCA55700E08231 /* TimeIntervalExtensions.swift */; };
 		9B5ECB392AC460910088E931 /* JSONDateAndTimeConversionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5ECB382AC460910088E931 /* JSONDateAndTimeConversionsTests.swift */; };
 		9B5ECB3B2AC6E60F0088E931 /* DatesAndTimeConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5ECB3A2AC6E60F0088E931 /* DatesAndTimeConversionTests.swift */; };
@@ -48,6 +54,12 @@
 		9B1C456F2ABDD66700DFE452 /* AlarmSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingsViewController.swift; sourceTree = "<group>"; };
 		9B1C45722ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingsViewModel.swift; sourceTree = "<group>"; };
 		9B2031C82ACED2060074C962 /* TradingAlarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TradingAlarm.entitlements; sourceTree = "<group>"; };
+		9B2031CA2ACF7B960074C962 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		9B2031CC2ACF7CC80074C962 /* AtomicDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicDictionary.swift; sourceTree = "<group>"; };
+		9B2031CE2ACF8B440074C962 /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		9B2031D22AD05E240074C962 /* AppLifecycleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLifecycleManager.swift; sourceTree = "<group>"; };
+		9B2031D52AD19C780074C962 /* DataManager+debugJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+debugJSON.swift"; sourceTree = "<group>"; };
+		9B2031D72AD19DB80074C962 /* AlarmResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmResponder.swift; sourceTree = "<group>"; };
 		9B4C921B2ACCA55700E08231 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		9B5ECB372AC45D250088E931 /* defaultNYAlarms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = defaultNYAlarms.json; sourceTree = "<group>"; };
 		9B5ECB382AC460910088E931 /* JSONDateAndTimeConversionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDateAndTimeConversionsTests.swift; sourceTree = "<group>"; };
@@ -211,15 +223,21 @@
 			isa = PBXGroup;
 			children = (
 				9B2031C82ACED2060074C962 /* TradingAlarm.entitlements */,
-				9BFFD9922A7E9838004C864F /* Main.storyboard */,
-				9B5ECB422ACB9B260088E931 /* AlarmScheduler.swift */,
-				9BDD1BC62A86CE4600A34EFE /* DataManager.swift */,
 				9BDD1BBC2A84451B00A34EFE /* Data */,
 				9B1C456C2ABDD61A00DFE452 /* Sections - ViewControllers */,
 				9BD013EA2A893CC700C35373 /* Extensions */,
-				9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */,
 				9BDD1BB92A82F58400A34EFE /* Sounds */,
 				9BE118612A8124FD0007D893 /* SupportingFiles */,
+				9BFFD9922A7E9838004C864F /* Main.storyboard */,
+				9B2031CA2ACF7B960074C962 /* AppServices.swift */,
+				9B2031D22AD05E240074C962 /* AppLifecycleManager.swift */,
+				9B5ECB422ACB9B260088E931 /* AlarmScheduler.swift */,
+				9B2031D72AD19DB80074C962 /* AlarmResponder.swift */,
+				9BDD1BC62A86CE4600A34EFE /* DataManager.swift */,
+				9B2031D52AD19C780074C962 /* DataManager+debugJSON.swift */,
+				9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */,
+				9B2031CE2ACF8B440074C962 /* Injection.swift */,
+				9B2031CC2ACF7CC80074C962 /* AtomicDictionary.swift */,
 				9B5ECB3D2AC83D4B0088E931 /* TimeProvider.swift */,
 			);
 			path = TradingAlarm;
@@ -341,18 +359,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BD013EC2A893D1000C35373 /* DateExtensions.swift in Sources */,
+				9B2031CB2ACF7B960074C962 /* AppServices.swift in Sources */,
 				9BDD1BB62A82E90900A34EFE /* SoundPlayer.swift in Sources */,
+				9B2031D62AD19C780074C962 /* DataManager+debugJSON.swift in Sources */,
 				9B9930362ABE229000B7665F /* AlarmSettingTableViewCell.swift in Sources */,
 				9BDD1BC72A86CE4600A34EFE /* DataManager.swift in Sources */,
+				9B2031CD2ACF7CC80074C962 /* AtomicDictionary.swift in Sources */,
 				9BFFD9912A7E9838004C864F /* AlarmsViewController.swift in Sources */,
 				9B1C45732ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift in Sources */,
 				9BFFD98D2A7E9838004C864F /* AppDelegate.swift in Sources */,
 				9BFFD98F2A7E9838004C864F /* SceneDelegate.swift in Sources */,
 				9B1C45702ABDD66700DFE452 /* AlarmSettingsViewController.swift in Sources */,
+				9B2031D42AD05E240074C962 /* AppLifecycleManager.swift in Sources */,
 				9BD014142A8FB4AE00C35373 /* StringExtensions.swift in Sources */,
 				9BDD1BBE2A84453800A34EFE /* Alarm.swift in Sources */,
 				9B4C921C2ACCA55700E08231 /* TimeIntervalExtensions.swift in Sources */,
 				9BDD1BC52A8598EA00A34EFE /* TimeString.swift in Sources */,
+				9B2031CF2ACF8B450074C962 /* Injection.swift in Sources */,
+				9B2031D82AD19DB80074C962 /* AlarmResponder.swift in Sources */,
 				9B5ECB3E2AC83D4B0088E931 /* TimeProvider.swift in Sources */,
 				9B5ECB432ACB9B260088E931 /* AlarmScheduler.swift in Sources */,
 			);

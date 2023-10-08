@@ -16,17 +16,20 @@ class AlarmsViewController: UIViewController {
     var subscribers = [AnyCancellable]()
     let soundPlayer = SoundPlayer()
     
+    @Injected var dataManager: DataManager
+    @Injected var alarmScheduler: AlarmScheduler
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Listens for triggered alarms to display alarm screen
-        DataManager.shared.alarmScheduler.triggeredAlertPublisher
+        alarmScheduler.alarmResponder.triggeredAlertPublisher
             .receive(on: DispatchQueue.main)
             .sink { alarmingState in
                 let identifier = alarmingState.id
                 
                 print("Received AlertId: \(identifier)for displaying")
-                guard let activeAlert = DataManager.shared.getAlertBy(id: identifier) else {
+                guard let activeAlert = self.dataManager.getAlertBy(id: identifier) else {
                     return
                 }
                 

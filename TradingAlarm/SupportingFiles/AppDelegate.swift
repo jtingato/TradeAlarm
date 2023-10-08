@@ -7,12 +7,18 @@
 
 import UIKit
 import UserNotifications
+
 @main
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    let appServices = AppServices()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UNUserNotificationCenter.current().delegate = DataManager.shared.alarmScheduler
+        @Injected var scheduler: AlarmScheduler
+        
+        UNUserNotificationCenter.current().delegate = scheduler.alarmResponder
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.sound,.alert,.badge, .criticalAlert]) { (granted, error) in
             if granted {
@@ -69,13 +75,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.synchronize()
     }
 }
-
-//extension AppDelegate: UNUserNotificationCenterDelegate {
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
-//        print("userNotificationCenter didReceive")
-//    }
-//    
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-//        print("userNotificationCenter willPresent")
-//    }
-//}
