@@ -38,6 +38,10 @@ extension Date {
         
         return dateComponents
     }
+    
+    var isTradingDay: Bool {
+        !Calendar.current.isDateInWeekend(Date())
+    }
 }
 
 

@@ -8,5 +8,8 @@
 import Foundation
 
 class AlarmSettingsViewModel {
-    var alarmsList: [Alarm] = DataManager.shared.allAlarms
+    @Injected var dataManager: DataManager
+    
+    lazy var alarmsList: [Alarm] = dataManager.allAlarms
+    
 }

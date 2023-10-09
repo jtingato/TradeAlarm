@@ -15,12 +15,11 @@ struct AlarmingState {
     var sounding: Bool
 }
 
-class AlarmScheduler: NSObject {
+class AlarmScheduler: Injectable {
     
     let notificationCenter = UNUserNotificationCenter.current()
     
-    // Publishes to subscriber when an alert becomes active
-    var triggeredAlertPublisher = PassthroughSubject<AlarmingState, Never>()
+    let alarmResponder = AlarmResponder()
     
     func schedule(alarms: [Alarm]) {
         resetAllAlerts()
@@ -71,8 +70,8 @@ class AlarmScheduler: NSObject {
          await notificationCenter.pendingNotificationRequests()
     }
     
-    func getDeliveredAlarms() async -> [UNNotification] {
-        await notificationCenter.deliveredNotifications()
+    func getDeliveredAlarms(completion: @escaping ([UNNotification]) -> Void) {
+        notificationCenter.getDeliveredNotifications(completionHandler: completion)
     }
     
     func removeAllPendingAlarms() {
@@ -86,26 +85,5 @@ class AlarmScheduler: NSObject {
     func resetAllAlerts() {
         removeAllPendingAlarms()
         removeAllDeliveredAlerts()
-    }
-}
-
-
-extension AlarmScheduler: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        if let uuid = response.notification.request.content.userInfo["identifier"] as? String {
-            print("AlarmScheduler : userNotificationCenter didReceive alerId: \(uuid)")
-            
-            let alarmingState = AlarmingState(id: uuid, animated: false, sounding: false)
-            triggeredAlertPublisher.send(alarmingState)
-        }
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if let uuid = notification.request.content.userInfo["identifier"] as? String {
-            print("AlarmScheduler : userNotificationCenter willPresent alerId: \(uuid)")
-            
-            let alarmingState = AlarmingState(id: uuid, animated: true, sounding: true)
-            triggeredAlertPublisher.send(alarmingState)
-        }
     }
 }
