@@ -61,10 +61,6 @@ class DataManager: Injectable {
         alarms.alarms.filter { $0.alarmEnabled == true }
     }
     
-    func fetchAlarmWith(id: String) -> Alarm? {
-        allAlarms.first { $0.alarmId == id }
-    }
-    
     private func readLocalJSONFile(for name: String) -> Data? {
         do {
             if let filePath = Bundle.main.path(forResource: name, ofType: nil) {
@@ -122,5 +118,18 @@ class DataManager: Injectable {
     init(mode: DataMode = AppServices.datamode) {
         self.mode = mode
         setAlarms(mode: mode)
+    }
+}
+
+// MARK: - DAO functions
+
+extension DataManager {
+    func fetchAlarmWith(id: String) -> Alarm? {
+        allAlarms.first { $0.alarmId == id }
+    }
+    
+    func updateAlarmWith(updatedAlarm: Alarm) {
+        guard let index = allAlarms.firstIndex(where: { $0.alarmId == updatedAlarm.alarmId }) else { return }
+        alarms.alarms[index] = updatedAlarm
     }
 }
