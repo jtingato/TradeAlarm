@@ -15,6 +15,7 @@ class AlarmSettingTableViewCell: UITableViewCell {
     var thisAlarm: Alarm?
     var alarmIdentifier: String = ""
     
+    @Injected var datamanager: DataManager
     
     func populateCell(_ alarm: Alarm) {
         thisAlarm = alarm
@@ -28,7 +29,8 @@ class AlarmSettingTableViewCell: UITableViewCell {
         thisAlarm?.alarmEnabled = alarmEnabledSwitch.isOn
         
         if let thisAlarm = thisAlarm {
-            print("Updating \(thisAlarm) to \(alarmEnabledSwitch.isOn ? "enabled" : "disabled")")
+            print("Updating \(thisAlarm.alarmId) to \(alarmEnabledSwitch.isOn ? "enabled" : "disabled")")
+            print(datamanager.allAlarms.first!.alarmId)
         }
     }
 }

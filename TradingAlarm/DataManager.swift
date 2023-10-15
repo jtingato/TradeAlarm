@@ -18,6 +18,9 @@ class DataManager: Injectable {
     
     /// A flag that determines which set of default alarms to use
     var mode: DataMode
+    
+    /// Data store for currently stored alarms
+    /// Alarms are only scheduled if it is a trading day (weekday)
     private var alarms = Alarms(alarms: []) {
         didSet {
             @Injected var alarmScheduler: AlarmScheduler
@@ -37,6 +40,7 @@ class DataManager: Injectable {
         enabledAlarms.filter { $0.alarmTime.timeIntervalSinceReferenceDate < Date.now.timeIntervalSinceReferenceDate }
     }
     
+    /// Returns the last Alarm that has been presented to the screen
     var lastDeliveredAlarm: Alarm? {
         inactiveDailyAlarms.last
     }
@@ -57,8 +61,8 @@ class DataManager: Injectable {
         alarms.alarms.filter { $0.alarmEnabled == true }
     }
     
-    func getAlertBy(id: String) -> Alarm? {
-        enabledAlarms.first { $0.alarmId == id }
+    func fetchAlarmWith(id: String) -> Alarm? {
+        allAlarms.first { $0.alarmId == id }
     }
     
     private func readLocalJSONFile(for name: String) -> Data? {

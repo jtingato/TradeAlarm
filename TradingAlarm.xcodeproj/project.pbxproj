@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0D36DC2AD4B65F003C258C /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D36DB2AD4B65F003C258C /* AddAlarmViewController.swift */; };
 		9B1C45702ABDD66700DFE452 /* AlarmSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C456F2ABDD66700DFE452 /* AlarmSettingsViewController.swift */; };
 		9B1C45732ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C45722ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift */; };
 		9B2031CB2ACF7B960074C962 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031CA2ACF7B960074C962 /* AppServices.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B0D36DB2AD4B65F003C258C /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 		9B1C456F2ABDD66700DFE452 /* AlarmSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingsViewController.swift; sourceTree = "<group>"; };
 		9B1C45722ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingsViewModel.swift; sourceTree = "<group>"; };
 		9B2031C82ACED2060074C962 /* TradingAlarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TradingAlarm.entitlements; sourceTree = "<group>"; };
@@ -106,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0D36DA2AD4B63A003C258C /* Add Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				9B0D36DB2AD4B65F003C258C /* AddAlarmViewController.swift */,
+			);
+			path = "Add Alarm";
+			sourceTree = "<group>";
+		};
+		9B0D36DD2AD4D5F3003C258C /* Displaying Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9B1C456F2ABDD66700DFE452 /* AlarmSettingsViewController.swift */,
+				9B9930352ABE229000B7665F /* AlarmSettingTableViewCell.swift */,
+				9B1C45722ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift */,
+			);
+			path = "Displaying Settings";
+			sourceTree = "<group>";
+		};
 		9B1C456C2ABDD61A00DFE452 /* Sections - ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +146,8 @@
 		9B1C456E2ABDD64000DFE452 /* Alert Settings */ = {
 			isa = PBXGroup;
 			children = (
-				9B1C456F2ABDD66700DFE452 /* AlarmSettingsViewController.swift */,
-				9B1C45722ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift */,
-				9B9930352ABE229000B7665F /* AlarmSettingTableViewCell.swift */,
+				9B0D36DA2AD4B63A003C258C /* Add Alarm */,
+				9B0D36DD2AD4D5F3003C258C /* Displaying Settings */,
 			);
 			path = "Alert Settings";
 			sourceTree = "<group>";
@@ -382,6 +401,7 @@
 			files = (
 				9BD013EC2A893D1000C35373 /* DateExtensions.swift in Sources */,
 				9B2031CB2ACF7B960074C962 /* AppServices.swift in Sources */,
+				9B0D36DC2AD4B65F003C258C /* AddAlarmViewController.swift in Sources */,
 				9BDD1BB62A82E90900A34EFE /* SoundPlayer.swift in Sources */,
 				9B2031D62AD19C780074C962 /* DataManager+debugJSON.swift in Sources */,
 				9B9930362ABE229000B7665F /* AlarmSettingTableViewCell.swift in Sources */,
@@ -591,7 +611,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TradingAlarm/TradingAlarm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = A489R7NNL3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TradingAlarm/SupportingFiles/Info.plist;
@@ -621,7 +641,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TradingAlarm/TradingAlarm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = A489R7NNL3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TradingAlarm/SupportingFiles/Info.plist;
