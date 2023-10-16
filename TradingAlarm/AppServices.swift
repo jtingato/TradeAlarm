@@ -8,20 +8,21 @@
 import Foundation
 import Combine
 
-class AppServices {
-    
+class AppServices: Injectable {
     static var datamode: DataMode = .debugMultipleRelativeTimesToNow
     
     var subscriber = Set<AnyCancellable>()
+    
     init() {
-        // Alarmscheduler must be first because DataManager depends on it for initialization
+        //
+        InjectedValues[AppLifecycleManager.self] = AppLifecycleManager()
+        
+        // Alarmscheduler must be set prior to DataManager because DataManager depends on it for initialization
         InjectedValues[AlarmScheduler.self] = AlarmScheduler()
         
         InjectedValues[DataManager.self] =  DataManager(
             mode: AppServices.datamode
         )
-        
-        InjectedValues[AppLifecycleManager.self] = AppLifecycleManager()
         
         @Injected var appLifecycleManager: AppLifecycleManager
         @Injected var dataManager: DataManager

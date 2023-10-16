@@ -29,7 +29,7 @@ class AlarmsViewController: UIViewController {
                 let identifier = alarmingState.id
                 
                 print("Received AlertId: \(identifier)for displaying")
-                guard let activeAlert = self.dataManager.getAlertBy(id: identifier) else {
+                guard let activeAlert = self.dataManager.fetchAlarmWith(id: identifier) else {
                     return
                 }
                 

@@ -54,4 +54,15 @@ struct Alarm: Codable {
         let timeStringFromJson  = try container.decode(String.self, forKey: .alarmTime)
         self.alarmTime          = TimeProvider(timeString: timeStringFromJson).alarmDate
     }
+    
+    init(alarmTitle: String, alarmDescription: String, alarmTime: Date ) {
+        self.alarmId = UUID().uuidString
+        self.alarmTitle = alarmTitle
+        self.alarmDescription = alarmDescription
+        self.alarmTime = alarmTime
+        self.alarmRepeats = false
+        self.alarmEnabled = true
+        self.alarmSoundName = "happybells"
+        self.alarmSoundEnabled = true
+    }
 }
