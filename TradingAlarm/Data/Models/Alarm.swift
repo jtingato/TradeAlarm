@@ -65,4 +65,17 @@ struct Alarm: Codable {
         self.alarmSoundName = "happybells"
         self.alarmSoundEnabled = true
     }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(alarmId, forKey: .alarmId)
+        try container.encode(alarmTitle, forKey: .alarmTitle)
+        try container.encode(alarmDescription, forKey: .alarmDescription)
+        try container.encode(alarmRepeats, forKey: .alarmRepeats)
+        try container.encode(alarmEnabled, forKey: .alarmEnabled)
+        try container.encode(alarmSoundName, forKey: .alarmSoundName)
+        try container.encode(alarmSoundEnabled, forKey: .alarmSoundEnabled)
+        try container.encode(alarmTime, forKey: .alarmTime)
+    }
 }

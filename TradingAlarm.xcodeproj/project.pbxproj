@@ -14,7 +14,7 @@
 		9B2031CD2ACF7CC80074C962 /* AtomicDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031CC2ACF7CC80074C962 /* AtomicDictionary.swift */; };
 		9B2031CF2ACF8B450074C962 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031CE2ACF8B440074C962 /* Injection.swift */; };
 		9B2031D42AD05E240074C962 /* AppLifecycleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031D22AD05E240074C962 /* AppLifecycleManager.swift */; };
-		9B2031D62AD19C780074C962 /* DataManager+debugJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031D52AD19C780074C962 /* DataManager+debugJSON.swift */; };
+		9B2031D62AD19C780074C962 /* JsonProcessing+debugJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031D52AD19C780074C962 /* JsonProcessing+debugJSON.swift */; };
 		9B2031D82AD19DB80074C962 /* AlarmResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2031D72AD19DB80074C962 /* AlarmResponder.swift */; };
 		9B4C921C2ACCA55700E08231 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C921B2ACCA55700E08231 /* TimeIntervalExtensions.swift */; };
 		9B5ECB392AC460910088E931 /* JSONDateAndTimeConversionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5ECB382AC460910088E931 /* JSONDateAndTimeConversionsTests.swift */; };
@@ -26,6 +26,7 @@
 		9BD013EC2A893D1000C35373 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD013EB2A893D1000C35373 /* DateExtensions.swift */; };
 		9BD013EE2A8944BA00C35373 /* testAlarm.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BD013ED2A89403200C35373 /* testAlarm.json */; };
 		9BD014142A8FB4AE00C35373 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD014132A8FB4AE00C35373 /* StringExtensions.swift */; };
+		9BD358C82AE0C5C30048DB8A /* JsonProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD358C72AE0C5C30048DB8A /* JsonProcessing.swift */; };
 		9BDD1BB62A82E90900A34EFE /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */; };
 		9BDD1BB82A82F36800A34EFE /* happybells.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9BDD1BB72A82F36800A34EFE /* happybells.wav */; };
 		9BDD1BBE2A84453800A34EFE /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD1BBD2A84453800A34EFE /* Alarm.swift */; };
@@ -60,7 +61,7 @@
 		9B2031CC2ACF7CC80074C962 /* AtomicDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicDictionary.swift; sourceTree = "<group>"; };
 		9B2031CE2ACF8B440074C962 /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		9B2031D22AD05E240074C962 /* AppLifecycleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLifecycleManager.swift; sourceTree = "<group>"; };
-		9B2031D52AD19C780074C962 /* DataManager+debugJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+debugJSON.swift"; sourceTree = "<group>"; };
+		9B2031D52AD19C780074C962 /* JsonProcessing+debugJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonProcessing+debugJSON.swift"; sourceTree = "<group>"; };
 		9B2031D72AD19DB80074C962 /* AlarmResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmResponder.swift; sourceTree = "<group>"; };
 		9B4C921B2ACCA55700E08231 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		9B5ECB372AC45D250088E931 /* defaultNYAlarms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = defaultNYAlarms.json; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		9BD013EB2A893D1000C35373 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		9BD013ED2A89403200C35373 /* testAlarm.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testAlarm.json; sourceTree = "<group>"; };
 		9BD014132A8FB4AE00C35373 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		9BD358C72AE0C5C30048DB8A /* JsonProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonProcessing.swift; sourceTree = "<group>"; };
 		9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		9BDD1BB72A82F36800A34EFE /* happybells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = happybells.wav; sourceTree = "<group>"; };
 		9BDD1BBD2A84453800A34EFE /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -152,14 +154,14 @@
 			path = "Alert Settings";
 			sourceTree = "<group>";
 		};
-		9B2031C92ACF54BD0074C962 /* Json Files */ = {
+		9B2031C92ACF54BD0074C962 /* Default JSON */ = {
 			isa = PBXGroup;
 			children = (
 				9BDD1BC12A85388B00A34EFE /* defaultUTCAlarms.json */,
 				9B5ECB372AC45D250088E931 /* defaultNYAlarms.json */,
 				9BD013ED2A89403200C35373 /* testAlarm.json */,
 			);
-			path = "Json Files";
+			path = "Default JSON";
 			sourceTree = "<group>";
 		};
 		9BD013EA2A893CC700C35373 /* Extensions */ = {
@@ -170,6 +172,16 @@
 				9B4C921B2ACCA55700E08231 /* TimeIntervalExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BD358C92AE0C8B00048DB8A /* JSON Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				9B2031C92ACF54BD0074C962 /* Default JSON */,
+				9BD358C72AE0C5C30048DB8A /* JsonProcessing.swift */,
+				9B2031D52AD19C780074C962 /* JsonProcessing+debugJSON.swift */,
+			);
+			path = "JSON Parsing";
 			sourceTree = "<group>";
 		};
 		9BDD1BB92A82F58400A34EFE /* Sounds */ = {
@@ -183,7 +195,8 @@
 		9BDD1BBC2A84451B00A34EFE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9B2031C92ACF54BD0074C962 /* Json Files */,
+				9BD358C92AE0C8B00048DB8A /* JSON Parsing */,
+				9BDD1BC62A86CE4600A34EFE /* DataManager.swift */,
 				9BDD1BC32A853CFD00A34EFE /* Models */,
 			);
 			path = Data;
@@ -252,8 +265,6 @@
 				9B2031D22AD05E240074C962 /* AppLifecycleManager.swift */,
 				9B5ECB422ACB9B260088E931 /* AlarmScheduler.swift */,
 				9B2031D72AD19DB80074C962 /* AlarmResponder.swift */,
-				9BDD1BC62A86CE4600A34EFE /* DataManager.swift */,
-				9B2031D52AD19C780074C962 /* DataManager+debugJSON.swift */,
 				9BDD1BB52A82E90900A34EFE /* SoundPlayer.swift */,
 				9B2031CE2ACF8B440074C962 /* Injection.swift */,
 				9B2031CC2ACF7CC80074C962 /* AtomicDictionary.swift */,
@@ -403,7 +414,7 @@
 				9B2031CB2ACF7B960074C962 /* AppServices.swift in Sources */,
 				9B0D36DC2AD4B65F003C258C /* AddAlarmViewController.swift in Sources */,
 				9BDD1BB62A82E90900A34EFE /* SoundPlayer.swift in Sources */,
-				9B2031D62AD19C780074C962 /* DataManager+debugJSON.swift in Sources */,
+				9B2031D62AD19C780074C962 /* JsonProcessing+debugJSON.swift in Sources */,
 				9B9930362ABE229000B7665F /* AlarmSettingTableViewCell.swift in Sources */,
 				9BDD1BC72A86CE4600A34EFE /* DataManager.swift in Sources */,
 				9B2031CD2ACF7CC80074C962 /* AtomicDictionary.swift in Sources */,
@@ -421,6 +432,7 @@
 				9B2031D82AD19DB80074C962 /* AlarmResponder.swift in Sources */,
 				9B5ECB3E2AC83D4B0088E931 /* TimeProvider.swift in Sources */,
 				9B5ECB432ACB9B260088E931 /* AlarmScheduler.swift in Sources */,
+				9BD358C82AE0C5C30048DB8A /* JsonProcessing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

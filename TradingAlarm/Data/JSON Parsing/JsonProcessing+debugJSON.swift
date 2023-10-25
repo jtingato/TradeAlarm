@@ -7,10 +7,10 @@
 
 import Foundation
 
-extension DataManager {
+extension JsonProcessing {
     /// Uses a group of times relative to the run time and returns a Data object representing a returned json string
     /// This string is parsed from its know type into codable alarms
-    var debugJson: Data? {
+    static var debugJson: Data? {
         let now = Date() + TimeInterval.oneHour
         
         let t1 = (now + TimeInterval.minutes(1)).timeString
