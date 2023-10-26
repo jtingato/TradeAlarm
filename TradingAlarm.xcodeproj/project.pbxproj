@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50031D8987208CAB66AD7D9A /* Pods_TradingAlarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2250143C135B4F08048BC76 /* Pods_TradingAlarmTests.framework */; };
 		9B0D36DC2AD4B65F003C258C /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D36DB2AD4B65F003C258C /* AddAlarmViewController.swift */; };
 		9B1C45702ABDD66700DFE452 /* AlarmSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C456F2ABDD66700DFE452 /* AlarmSettingsViewController.swift */; };
 		9B1C45732ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C45722ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift */; };
@@ -40,6 +41,7 @@
 		9BFFD9942A7E9838004C864F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFFD9922A7E9838004C864F /* Main.storyboard */; };
 		9BFFD9962A7E983A004C864F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFFD9952A7E983A004C864F /* Assets.xcassets */; };
 		9BFFD9992A7E983A004C864F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFFD9972A7E983A004C864F /* LaunchScreen.storyboard */; };
+		BF5C2DBF4C9841B567BB6341 /* Pods_TradingAlarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A28F5A2B6F89C7418701DBF /* Pods_TradingAlarm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E25D5F39B42CF0875ACB261 /* Pods-TradingAlarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingAlarmTests.release.xcconfig"; path = "Target Support Files/Pods-TradingAlarmTests/Pods-TradingAlarmTests.release.xcconfig"; sourceTree = "<group>"; };
+		4DB72E6DAB06CBDA912FB172 /* Pods-TradingAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingAlarm.debug.xcconfig"; path = "Target Support Files/Pods-TradingAlarm/Pods-TradingAlarm.debug.xcconfig"; sourceTree = "<group>"; };
+		5A28F5A2B6F89C7418701DBF /* Pods_TradingAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradingAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0D36DB2AD4B65F003C258C /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 		9B1C456F2ABDD66700DFE452 /* AlarmSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingsViewController.swift; sourceTree = "<group>"; };
 		9B1C45722ABDD6BF00DFE452 /* AlarmSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingsViewModel.swift; sourceTree = "<group>"; };
@@ -90,6 +95,9 @@
 		9BFFD9952A7E983A004C864F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BFFD9982A7E983A004C864F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BFFD99A2A7E983A004C864F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46B2D09FE5A74786E1F4ADB /* Pods-TradingAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingAlarm.release.xcconfig"; path = "Target Support Files/Pods-TradingAlarm/Pods-TradingAlarm.release.xcconfig"; sourceTree = "<group>"; };
+		E2250143C135B4F08048BC76 /* Pods_TradingAlarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradingAlarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E34130A7018CEFE2804842D0 /* Pods-TradingAlarmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingAlarmTests.debug.xcconfig"; path = "Target Support Files/Pods-TradingAlarmTests/Pods-TradingAlarmTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50031D8987208CAB66AD7D9A /* Pods_TradingAlarmTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +113,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5C2DBF4C9841B567BB6341 /* Pods_TradingAlarm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		055CF6FAAB78AA89A2295391 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A28F5A2B6F89C7418701DBF /* Pods_TradingAlarm.framework */,
+				E2250143C135B4F08048BC76 /* Pods_TradingAlarmTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9B0D36DA2AD4B63A003C258C /* Add Alarm */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +258,8 @@
 				9BFFD98B2A7E9838004C864F /* TradingAlarm */,
 				9BDD1BCD2A86FCDE00A34EFE /* TradingAlarmTests */,
 				9BFFD98A2A7E9838004C864F /* Products */,
+				F7504648568F524D3C3EDD5E /* Pods */,
+				055CF6FAAB78AA89A2295391 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -273,6 +294,18 @@
 			path = TradingAlarm;
 			sourceTree = "<group>";
 		};
+		F7504648568F524D3C3EDD5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DB72E6DAB06CBDA912FB172 /* Pods-TradingAlarm.debug.xcconfig */,
+				D46B2D09FE5A74786E1F4ADB /* Pods-TradingAlarm.release.xcconfig */,
+				E34130A7018CEFE2804842D0 /* Pods-TradingAlarmTests.debug.xcconfig */,
+				0E25D5F39B42CF0875ACB261 /* Pods-TradingAlarmTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,6 +313,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BDD1BD22A86FCDE00A34EFE /* Build configuration list for PBXNativeTarget "TradingAlarmTests" */;
 			buildPhases = (
+				653413A13FFA474E056552D9 /* [CP] Check Pods Manifest.lock */,
 				9BDD1BC82A86FCDE00A34EFE /* Sources */,
 				9BDD1BC92A86FCDE00A34EFE /* Frameworks */,
 				9BDD1BCA2A86FCDE00A34EFE /* Resources */,
@@ -298,10 +332,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFFD99D2A7E983A004C864F /* Build configuration list for PBXNativeTarget "TradingAlarm" */;
 			buildPhases = (
+				30C1A39141406C079D6C3A84 /* [CP] Check Pods Manifest.lock */,
 				9B2031DA2AD3FF440074C962 /* Build Number base on Git Commits */,
 				9BFFD9852A7E9838004C864F /* Sources */,
 				9BFFD9862A7E9838004C864F /* Frameworks */,
 				9BFFD9872A7E9838004C864F /* Resources */,
+				A7428141443EAC0430321B72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,6 +411,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		30C1A39141406C079D6C3A84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TradingAlarm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		653413A13FFA474E056552D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TradingAlarmTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9B2031DA2AD3FF440074C962 /* Build Number base on Git Commits */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +472,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\n\n# taken from blog post: http://www.mokacoding.com/blog/automatic-xcode-versioning-with-git/\n# Automatically sets version of target based on most recent tag in git\n# Automatically sets build number to number of commits\n#\n# Add script to build phase in xcode at the top of the chain named \"set build number\"\n# put this script in the root of the xcode project in a directory called scripts (good idea to version control this too)\n# call the script as $SRCROOT/scripts/set_build_number_by_git_commits.sh in xcode\n\ngit=$(sh /etc/profile; which git)\nnumber_of_commits=$(\"$git\" rev-list HEAD --count)\ngit_release_version=$(\"$git\" describe --tags --always --abbrev=0)\n\ntarget_plist=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\ndsym_plist=\"$DWARF_DSYM_FOLDER_PATH/$DWARF_DSYM_FILE_NAME/Contents/Info.plist\"\n\nfor plist in \"$target_plist\" \"$dsym_plist\"; do\n if [ -f \"$plist\" ]; then\n /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $number_of_commits\" \"$plist\"\n /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${git_release_version#*v}\" \"$plist\"\n fi\ndone\n";
+		};
+		A7428141443EAC0430321B72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TradingAlarm/Pods-TradingAlarm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TradingAlarm/Pods-TradingAlarm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TradingAlarm/Pods-TradingAlarm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -468,6 +565,7 @@
 /* Begin XCBuildConfiguration section */
 		9BDD1BD32A86FCDE00A34EFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34130A7018CEFE2804842D0 /* Pods-TradingAlarmTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +584,7 @@
 		};
 		9BDD1BD42A86FCDE00A34EFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E25D5F39B42CF0875ACB261 /* Pods-TradingAlarmTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -618,6 +717,7 @@
 		};
 		9BFFD99E2A7E983A004C864F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB72E6DAB06CBDA912FB172 /* Pods-TradingAlarm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -648,6 +748,7 @@
 		};
 		9BFFD99F2A7E983A004C864F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46B2D09FE5A74786E1F4ADB /* Pods-TradingAlarm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class JsonProcessing {
     static func initialAlarmsFor(mode: DataMode = AppServices.datamode) -> Alarms {
@@ -60,8 +61,9 @@ class JsonProcessing {
     
     // Parse the received data object and decode into alarms
     private static func parse(data: Data) throws -> Alarms  {
+        let realm = try Realm()
         let decodedAlarms = try JSONDecoder().decode(Alarms.self, from: data)
- 
-        return Alarms(alarms: [Alarm]())
+        
+        return decodedAlarms
     }
 }
