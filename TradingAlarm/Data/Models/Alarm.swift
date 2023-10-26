@@ -6,21 +6,22 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct Alarms: Codable {
     var alarms: [Alarm]
 }
 
 
-struct Alarm: Codable {
-    let alarmId: String
-    var alarmTitle: String?
-    var alarmDescription: String?
-    var alarmTime: Date
-    var alarmRepeats: Bool
-    var alarmEnabled: Bool
-    var alarmSoundName: String?
-    var alarmSoundEnabled: Bool
+final class Alarm: Object, Codable {
+    @Persisted(primaryKey: true) var alarmId: String
+    @Persisted var alarmTitle: String?
+    @Persisted var alarmDescription: String?
+    @Persisted var alarmTime: Date
+    @Persisted var alarmRepeats: Bool
+    @Persisted var alarmEnabled: Bool
+    @Persisted var alarmSoundName: String?
+    @Persisted var alarmSoundEnabled: Bool
     
     enum CodingKeys: String, CodingKey {
         case alarmId = "id"
@@ -33,14 +34,9 @@ struct Alarm: Codable {
         case alarmSoundEnabled
     }
     
-    mutating func update(alarm: Alarm) {
-        self.alarmEnabled = alarm.alarmEnabled
-        self.alarmSoundEnabled = alarm.alarmSoundEnabled
-        self.alarmRepeats = alarm.alarmRepeats
-        self.alarmSoundName = alarm.alarmSoundName
-    }
-    
-    init(from decoder: Decoder) throws {
+    convenience init(from decoder: Decoder) throws {
+        self.init()
+        
         let container           = try decoder.container(keyedBy: CodingKeys.self)
         
         self.alarmId            = try container.decodeIfPresent(String.self, forKey: .alarmId) ?? UUID().uuidString
@@ -55,7 +51,9 @@ struct Alarm: Codable {
         self.alarmTime          = TimeProvider(timeString: timeStringFromJson).alarmDate
     }
     
-    init(alarmTitle: String, alarmDescription: String, alarmTime: Date ) {
+    convenience init(alarmTitle: String, alarmDescription: String, alarmTime: Date ) {
+        self.init()
+        
         self.alarmId = UUID().uuidString
         self.alarmTitle = alarmTitle
         self.alarmDescription = alarmDescription
@@ -64,5 +62,18 @@ struct Alarm: Codable {
         self.alarmEnabled = true
         self.alarmSoundName = "happybells"
         self.alarmSoundEnabled = true
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(alarmId, forKey: .alarmId)
+        try container.encode(alarmTitle, forKey: .alarmTitle)
+        try container.encode(alarmDescription, forKey: .alarmDescription)
+        try container.encode(alarmRepeats, forKey: .alarmRepeats)
+        try container.encode(alarmEnabled, forKey: .alarmEnabled)
+        try container.encode(alarmSoundName, forKey: .alarmSoundName)
+        try container.encode(alarmSoundEnabled, forKey: .alarmSoundEnabled)
+        try container.encode(alarmTime, forKey: .alarmTime)
     }
 }

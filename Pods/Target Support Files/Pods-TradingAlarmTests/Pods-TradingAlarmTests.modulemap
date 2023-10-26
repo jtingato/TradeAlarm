@@ -1,0 +1,6 @@
+framework module Pods_TradingAlarmTests {
+  umbrella header "Pods-TradingAlarmTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
